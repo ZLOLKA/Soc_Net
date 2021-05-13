@@ -35,3 +35,4 @@ class Instagram_net(models.Model):
 
 class VK_group(models.Model):
     VK_accs = models.ManyToManyField(VK_acc)
+    name = models.CharField(max_length=20)

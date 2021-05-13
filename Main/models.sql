@@ -21,7 +21,8 @@ CREATE TABLE VK_net(
     on_whom int REFERENCES VK_acc(id)
 );
 CREATE TABLE VK_group(
-    id int PRIMARY KEY
+    id int PRIMARY KEY,
+    name varchar(20)
 );
 CREATE TABLE VK_group_TO_VK_acc(
     id          int PRIMARY KEY,
