@@ -6,12 +6,12 @@ from . import models
 
 # Create your views here.
 def home(request):
-    persons = models.Person.objects.all()
-    vk_accs = models.VK_acc.objects.all()
-    vk_net = models.VK_net.objects.all()
-    vk_groups = models.VK_group.objects.all()
-    inst_accs = models.Instagram_acc.objects.all()
-    inst_net = models.Instagram_net.objects.all()
+    persons = models.Person.objects.all()           # SELECT * FROM Person;
+    vk_accs = models.VK_acc.objects.all()           # SELECT * FROM VK_acc;
+    vk_net = models.VK_net.objects.all()            # SELECT * FROM VK_net;
+    vk_groups = models.VK_group.objects.all()       # SELECT * FROM VK_group;
+    inst_accs = models.Instagram_acc.objects.all()  # SELECT * FROM Instagram_acc;
+    inst_net = models.Instagram_net.objects.all()   # SELECT * FROM Instagram_net;
     context = {
         "persons": persons,
         "vk_accs": vk_accs,
