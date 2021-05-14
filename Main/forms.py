@@ -46,7 +46,7 @@ INSERT INTO Vk_acc (
         fields = "__all__"
 
 
-class Vk_netForm(forms.ModelForm):
+class VK_netForm(forms.ModelForm):
     """
 INSERT INTO VK_net (
     who,
@@ -61,7 +61,7 @@ INSERT INTO VK_net (
         fields = "__all__"
 
 
-class Vk_groupForm(forms.ModelForm):
+class VK_groupForm(forms.ModelForm):
     """
 INSERT INTO Vk_group (
     id,
@@ -89,7 +89,7 @@ INSERT INTO Instagram_acc (
         fields = "__all__"
 
 
-class Instagram_net(forms.ModelForm):
+class Instagram_netForm(forms.ModelForm):
     """
 INSERT INTO Instagram_net (
     who,

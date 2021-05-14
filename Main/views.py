@@ -1,5 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from . import forms
 from . import models
 
 
@@ -22,16 +23,18 @@ def home(request):
     return render(request, "Home.html", context)
 
 def db_form(request, table_name):
-    if table_name == "Course":
-        Form = CourseForm
-    elif table_name == "Teacher":
-        Form = TeacherForm
-    elif table_name == "Class":
-        Form = ClassForm
-    elif table_name == "Student":
-        Form = StudentForm
-    elif table_name == "Level":
-        Form = LevelForm
+    if table_name == "Person":
+        Form = forms.PersonForm
+    elif table_name == "VK_acc":
+        Form = forms.VK_accForm
+    elif table_name == "VK_net":
+        Form = forms.VK_netForm
+    elif table_name == "VK_group":
+        Form = forms.VK_groupForm
+    elif table_name == "Instagram_acc":
+        Form = forms.Instagram_accForm
+    elif table_name == "Instagram_net":
+        Form = forms.Instagram_netForm
     else:
         raise Exception("Incorrect table name")
 

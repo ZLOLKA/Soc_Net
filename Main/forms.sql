@@ -15,7 +15,7 @@ INSERT INTO Person (
     get_from_form_birth_day,
     get_from_form_mob_number
 );
-INSERT INTO Vk_acc (
+INSERT INTO VK_acc (
     city,
     school,
     university,
@@ -33,7 +33,7 @@ INSERT INTO VK_net (
     get_from_form_who,
     get_from_form_on_whom
 );
-INSERT INTO Vk_group (
+INSERT INTO VK_group (
     id,
     name
 ) VALUES (
