@@ -5,5 +5,50 @@
 {% endblock %}
 
 {% block Main %}
-    Hello
+    <p><a href="DB_Person.html">Create Person</a></p>
+    <p><a href="DB_VK_acc.html">Create Vk_acc</a></p>
+    <p><a href="DB_VK_net.html">Create Vk_net</a></p>
+    <p><a href="DB_VK_group.html">Create VK_group</a></p>
+    <p><a href="DB_Instagram_acc.html">Create Instagram_acc</a></p>
+    <p><a href="DB_Instagram_net.html">Create Instagram_net</a></p>
+    <p>Person_#####################################################################################</p>
+    {% for person in persons %}
+        <p>{{ person.first_name }}</p>
+        <p>{{ person.last_name }}</p>
+        <p>{{ person.patronymic }}</p>
+        <p>{{ person.birth_year }}</p>
+        <p>{{ person.birth_month }}</p>
+        <p>{{ person.birth_day }}</p>
+    {% endfor %}
+    <p>Person_#####################################################################################</p>
+    <p>VK_acc_#####################################################################################</p>
+    {% for vk_acc in vk_accs %}
+        <p>{{ vk_acc.city }}</p>
+        <p>{{ vk_acc.school }}</p>
+        <p>{{ vk_acc.university }}</p>
+        <p>{{ vk_acc.id_person }}</p>
+    {% endfor %}
+    <p>VK_acc_#####################################################################################</p>
+    <p>VK_net_#####################################################################################</p>
+    {% for vk_conn in vk_net %}
+        <p>{{ vk_conn.who }}</p>
+        <p>{{ vk_conn.on_whom }}</p>
+    {% endfor %}
+    <p>VK_net_#####################################################################################</p>
+    <p>VK_group_###################################################################################</p>
+    {% for vk_group in vk_groups %}
+        <p>{{ vk_group.name }}</p>
+    {% endfor %}
+    <p>VK_group_###################################################################################</p>
+    <p>Inst_acc_###################################################################################</p>
+    {% for inst_acc in inst_accs %}
+        <p>{{ inst_acc.id_person }}</p>
+    {% endfor %}
+    <p>Inst_acc_###################################################################################</p>
+    <p>Inst_conn_##################################################################################</p>
+    {% for inst_conn in inst_net %}
+        <p>{{ inst_conn.who }}</p>
+        <p>{{ inst_conn.on_whom }}</p>
+    {% endfor %}
+    <p>Inst_conn_##################################################################################</p>
 {% endblock %}
